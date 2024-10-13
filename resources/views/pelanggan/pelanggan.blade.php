@@ -4,7 +4,7 @@
         <!-- Dashboard Menu -->
         <div class="bg-gray-100 w-2/12 h-screen items-center justify-center text-center">
             {{-- <div class="my-10 mx-6 mt-14 font-bold text-2xl">logo</div> --}}
-            <img src="{{ asset('aset/dashboard.png') }}" alt="" class="my-10 mx-6 mt-14 w-20">
+            <img src="{{ asset('aset/logo-tirta.png') }}" alt="" class="my-10 mx-6 mt-14 w-20">
             <div class="list gap-2 justify-center items-center m-6 border-b-2">
                 <a href="{{ url('/pelanggan') }}">
                     <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">pelanggan</div>

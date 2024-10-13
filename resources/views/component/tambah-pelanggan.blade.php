@@ -35,20 +35,20 @@
                                 <div class="mb-4">
                                     <label for="nama" class="block text-xl font-medium text-gray-700">nama</label>
                                     <input type="text" name="nama" id="nama"
-                                        class="mt-1 block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
+                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
                                         required>
                                 </div>
                                 <div class="mb-4">
                                     <label for="alamat" class="block text-xl font-medium text-gray-700">alamat</label>
                                     <input type="text" name="alamat" id="alamat"
-                                        class="mt-1 block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                         required>
                                 </div>
                                 <div class="mb-4">
                                     <label for="no_telepon" class="block text-xl font-medium text-gray-700">no telepon
                                     </label>
                                     <input type="number" name="no_telepon" id="no_telepon"
-                                        class="mt-1 block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                         required>
                                 </div>
                                 <div class="mb-4">

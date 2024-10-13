@@ -44,7 +44,35 @@ class pelangganController extends Controller
         }
     }
 
-    public function edit(){
-        
+    public function edit(Request $request, $id)
+    {
+        $pelanggan = pelangganModel::findOrFail($id);
+        return view('pelanggan.pelanggan-edit', compact('pelanggan'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'cabang' => 'required',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'no_telepon' => 'required',
+            'kelompok_pelanggan' => 'required',
+        ]);
+
+        $pelanggan = pelangganModel::findOrFail($id);
+        try {
+            $pelanggan->cabang = $request->input('cabang');
+            $pelanggan->nama = $request->input('nama');
+            $pelanggan->alamat = $request->input('alamat');
+            $pelanggan->no_telepon = $request->input('no_telepon');
+            $pelanggan->kelompok_pelanggan = $request->input('kelompok_pelanggan');
+            $pelanggan->save();
+            return redirect()->route('pelanggan');
+        } catch (\Exception $e) {
+            return redirect()->route('pelanggan')->withErrors('Gagal mengupdate data.');
+        }
+
+        return redirect()->route('pelanggan')->with('success', 'inputan berhasil ditambahkan');
     }
 }

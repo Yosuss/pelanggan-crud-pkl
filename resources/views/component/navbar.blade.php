@@ -6,6 +6,6 @@
     <div class="search grid grid-cols-3 gap-2 items-center">
         <input type="search" id="search" placeholder="search"
             class="text-left px-3 pb-1 rounded-lg bg-gray-100">
-        {{-- <img src="{{ asset('aset/dashboard.png') }}" alt="" class="w-20"> --}}
+        {{-- <img src="{{ asset('aset/logo-tirta.   png') }}" alt="" class="w-20"> --}}
     </div>
 </div>
