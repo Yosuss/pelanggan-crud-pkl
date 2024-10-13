@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\pelangganController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,6 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login',[loginController::class,'index'])->name('login');
 Route::get('/',[pelangganController::class,'index'])->name('pelanggan');
 Route::post('/pelanggan-tambah',[pelangganController::class,'tambah'])->name('pelanggan.tambah');
 Route::delete('/pelanggan-hapus{id}',[pelangganController::class,'hapus'])->name('pelanggan.hapus');
