@@ -20,6 +20,12 @@ class pelangganController extends Controller
             'alamat' => 'required',
             'no_telepon' => 'required',
             'kelompok_pelanggan' => 'required',
+        ],[
+            'cabang.required' => 'Cabang harus diisi.',
+            'nama.required' => 'Nama harus diisi.',
+            'alamat.required' => 'Alamat harus diisi.',
+            'no_telepon.required' => 'Nomor telepon harus diisi.',
+            'kelompok_pelanggan.required' => 'Kelompok pelanggan harus diisi.',        
         ]);
 
         // simpan data ( simple )
@@ -58,6 +64,12 @@ class pelangganController extends Controller
             'alamat' => 'required',
             'no_telepon' => 'required',
             'kelompok_pelanggan' => 'required',
+        ],[
+            'cabang.required' => 'Cabang harus diisi.',
+            'nama.required' => 'Nama harus diisi.',
+            'alamat.required' => 'Alamat harus diisi.',
+            'no_telepon.required' => 'Nomor telepon harus diisi.',
+            'kelompok_pelanggan.required' => 'Kelompok pelanggan harus diisi.',        
         ]);
 
         $pelanggan = pelangganModel::findOrFail($id);
