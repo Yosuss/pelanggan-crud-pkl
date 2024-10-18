@@ -1,6 +1,6 @@
 @extends('template.layout')
 @section('konten')
-    <div class="bg-gray-500 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-200 flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-md max-w-md ">
             <h2 class="text-2xl font-bold mb-6 text-center capitalize">edit data</h2>
             <form action="{{ route('pelanggan.update', $pelanggan->id_pelanggan) }}" method="POST">
