@@ -9,11 +9,11 @@
             </a>
             <div class="list gap-2 justify-center items-center m-6 border-b-2">
                 <a href="{{ url('/') }}">
-                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">pelanggan</div>
+                    <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
+                        pelanggan</div>
                 </a>
                 <a href="{{ url('/pengaduan') }}">
-                    <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
-                    pengaduan</div>
+                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">pengaduan</div>
                 </a>
             </div>
             <a href="{{ url('/login') }}">
@@ -37,10 +37,10 @@
             <!-- Navbar end -->
 
             <!-- Dashboard field -->
-            @include('component.tambah-pelanggan')
+            @include('component.tambah-pengaduan')
 
             <div class="form p-4">
-                <table action="" class="pelanggan text-center border-2 w-full">
+                <table action="" class="pengaduan text-center border-2 w-full">
                     <thead id="nav-data" class="nav-data">
                         <th class="font-bold border-2 py-1">no</th>
                         <th class="font-bold border-2 py-1">id_pelanggan</th>
@@ -48,27 +48,18 @@
                         <th class="font-bold border-2 py-1">nama</th>
                         <th class="font-bold border-2 py-1">alamat</th>
                         <th class="font-bold border-2 py-1">no_telepon</th>
-                        <th class="font-bold border-2 py-1">kelompok_pelanggan</th>
-                        <th colspan="2" class="font-bold border-2 py-1">Aksi</th>
+                        <th class="font-bold border-2 py-1">pengaduan</th>
                     </thead>
 
-                    @foreach ($pelanggan as $item)
+                    @foreach ($pengaduan as $item)
                         <tbody id="data" class="data">
                             <td class="border-2">{{ $loop->iteration }}</td>
-                            <td class="border-2">{{ $item->id_pelanggan }}</td>
-                            <td class="border-2">{{ $item->cabang }}</td>
-                            <td class="border-2">{{ $item->nama }}</td>
-                            <td class="border-2">{{ $item->alamat }}</td>
-                            <td class="border-2">{{ $item->no_telepon }}</td>
-                            <td class="border-2">{{ $item->kelompok_pelanggan }}</td>
-                            <td class="flex">
-                                <div class="w-1/2">
-                                    @include('component.btn-edit')
-                                </div>
-                                <div class="w-1/2">
-                                    @include('component.btn-hapus')
-                                </div>
-                            </td>
+                            <td class="border-2">{{ $item->pelanggan->id_pelanggan }}</td>
+                            <td class="border-2">{{ $item->pelanggan->cabang }}</td>
+                            <td class="border-2">{{ $item->pelanggan->nama }}</td>
+                            <td class="border-2">{{ $item->pelanggan->alamat }}</td>
+                            <td class="border-2">{{ $item->pelanggan->no_telepon }}</td>
+                            <td class="border-2">{{ $item->pengaduan }}</td>
                         </tbody>
                     @endforeach
                 </table>

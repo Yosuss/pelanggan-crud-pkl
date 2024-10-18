@@ -18,44 +18,32 @@
                         <div class="bg-white p-6 xl justify-center">
                             <h2 class="font-bold text-3xl mb-4">Tambah Data</h2>
                             <!-- Form dalam modal -->
-                            <form action="{{ route('pelanggan.tambah') }}" method="POST" class="capitalize">
-                                @csrf
+                            <form action="{{ route('pengaduan.tambah') }}" method="POST" class="capitalize">
                                 <div class="mb-4">
-                                    <label for="cabang" class="block text-xl font-medium text-gray-700">cabang</label>
-                                    <select name="cabang" id="cabang"
+                                    <label for="id_pelanggan"
+                                        class="block text-xl font-medium text-gray-700">id_pelanggan</label>
+                                    {{-- <select name="id_pelanggan" id="id_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                        <option value="teluk buyung">teluk buyung</option>
-                                        <option value="jati sari">jati sari</option>
-                                        <option value="rawa tembaga">rawa tembaga</option>
-                                        <option value="wisma asri">wisma asri</option>
-                                        <option value="pondok hijau">pondok hijau</option>
+                                        <option value="id_pelanggan">id_pelanggan</option>
+                                    </select> --}}
+                                    <select name="id_pelanggan" id="id_pelanggan"
+                                        class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
+                                        required value="{{ $pengaduan->id_pelanggan }}">
+                                        <option value="id_pelanggan"
+                                        @if ($pengaduan->id_pelanggan == 'id_pelanggan') {
+                                        {{ 'selected' }}
+                                    } @endif>
+                                        id_pelanggan</option>
                                     </select>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="nama" class="block text-xl font-medium text-gray-700">nama</label>
-                                    <input type="text" name="nama" id="nama"
-                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="alamat" class="block text-xl font-medium text-gray-700">alamat</label>
-                                    <input type="text" name="alamat" id="alamat"
-                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="no_telepon" class="block text-xl font-medium text-gray-700">no telepon
-                                    </label>
-                                    <input type="number" name="no_telepon" id="no_telepon"
-                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="kelompok_pelanggan"
-                                        class="block text-xl font-medium text-gray-700">kelompok pelanggan</label>
-                                    <select name="kelompok_pelanggan" id="kelompok_pelanggan"
+                                    <label for="pengaduan"
+                                        class="block text-xl font-medium text-gray-700">pengaduan</label>
+                                    <select name="pengaduan" id="pengaduan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                        <option value="social">social</option>
-                                        <option value="rumah tangga">rumah tangga</option>
-                                        <option value="niaga">niaga</option>
-                                        <option value="industri">industri</option>
+                                        <option value="air kecil">air kecil</option>
+                                        <option value="air kotor">air kotor</option>
+                                        <option value="air tidak keruh">air tidak keruh</option>
                                     </select>
                                 </div>
                                 <div class="flex justify-end">

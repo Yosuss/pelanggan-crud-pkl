@@ -18,4 +18,10 @@ class pelangganModel extends Model
         'no_telepon',
         'kelompok_pelanggan',
     ];
+
+    // Relasi dengan model Pengaduan
+    public function pengaduan()
+    {
+        return $this->hasMany(penggaduanModel::class, 'id_pelanggan');
+    }
 }

@@ -3,7 +3,8 @@
     <div class="w-full h-screen bg-gray-100 flex justify-center items-center">
         <div class="login p-8 bg-white rounded-lg shadow-md">
             <h1 class="text-4xl font-bold text-center mb-4">login</h1>
-            <form action="" class="flex flex-col gap-4">
+            <form action="{{ route('login') }}" class="flex flex-col gap-4">
+                @csrf
                 <label for="username" class="block text-xl font-medium text-gray-700">username</label>
                 <input type="text" name="username" id="username"
                     class="block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"

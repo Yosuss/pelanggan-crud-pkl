@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('cabang'); // Nama cabang
             $table->string('nama'); // Nama pelanggan
             $table->string('alamat'); // Alamat pelanggan
-            $table->string('kelompok_pelanggan'); // kelompok pelanggan
             $table->string('no_telepon'); // Nomor telepon pelanggan
+            $table->string('kelompok_pelanggan'); // kelompok pelanggan
             $table->timestamps(); // created_at dan updated_at
         });
     }

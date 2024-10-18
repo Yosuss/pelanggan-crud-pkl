@@ -10,7 +10,7 @@
     <title>CRUD pelanggan</title>
 </head>
 
-<body>
+<body class="custom-cursor">
     @yield('konten')
 </body>
 
