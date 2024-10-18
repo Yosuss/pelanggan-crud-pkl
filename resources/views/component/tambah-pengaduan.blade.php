@@ -22,11 +22,11 @@
                                 <div class="mb-4">
                                     <label for="id_pelanggan"
                                         class="block text-xl font-medium text-gray-700">id_pelanggan</label>
-                                    {{-- <select name="id_pelanggan" id="id_pelanggan"
+                                    <select name="id_pelanggan" id="id_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
                                         <option value="id_pelanggan">id_pelanggan</option>
-                                    </select> --}}
-                                    <select name="id_pelanggan" id="id_pelanggan"
+                                    </select>
+                                    {{-- <select name="id_pelanggan" id="id_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
                                         required value="{{ $pengaduan->id_pelanggan }}">
                                         <option value="id_pelanggan"
@@ -34,7 +34,7 @@
                                         {{ 'selected' }}
                                     } @endif>
                                         id_pelanggan</option>
-                                    </select>
+                                    </select> --}}
                                 </div>
                                 <div class="mb-4">
                                     <label for="pengaduan"
