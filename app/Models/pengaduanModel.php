@@ -2,11 +2,10 @@
 
 namespace App\Models;
 
-use App\Http\Controllers\pengaduanController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class penggaduanModel extends Model
+class pengaduanModel extends Model
 {
     use HasFactory;
     protected $table = 'pengaduan';
@@ -21,4 +20,5 @@ class penggaduanModel extends Model
     {
         return $this->belongsTo(pelangganModel::class, 'id_pelanggan');
     }
+
 }
