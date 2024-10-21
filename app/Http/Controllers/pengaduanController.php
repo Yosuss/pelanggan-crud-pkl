@@ -11,7 +11,7 @@ class pengaduanController extends Controller
     //
     public function index()
     {
-        $pengaduan = pengaduanModel::with('pelanggan')->get(); // Mengambil semua pengaduan dengan relasi pelanggan
+        $pengaduan = pengaduanModel::all()->with('pelanggan')->get();
         return view('pengaduan.pengaduan', compact('pengaduan'));
     }
 
