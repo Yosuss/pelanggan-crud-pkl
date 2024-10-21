@@ -28,9 +28,9 @@
                                     </select>
                                     {{-- <select name="id_pelanggan" id="id_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
-                                        required value="{{ $pengaduan->id_pelanggan }}">
+                                        required value="{{ $pengaduan->pelanggan->id_pelanggan }}">
                                         <option value="id_pelanggan"
-                                        @if ($pengaduan->id_pelanggan == 'id_pelanggan') {
+                                        @if ($pengaduan->pelanggan->id_pelanggan == 'id_pelanggan') {
                                         {{ 'selected' }}
                                     } @endif>
                                         id_pelanggan</option>

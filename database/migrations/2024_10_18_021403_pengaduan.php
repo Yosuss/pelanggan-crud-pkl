@@ -14,10 +14,8 @@ return new class extends Migration
         //
         Schema::create('pengaduan', function (Blueprint $table) {
             $table->id('id_pengaduan'); // Primary key untuk pengaduan
-            $table->unsignedBigInteger('id_pelanggan'); // Kolom foreign key
-            $table->foreignId('id_pelanggan') // Foreign key untuk pelanggan
-                ->constrained('pelanggan') // Merujuk ke tabel pelanggan
-                ->onDelete('cascade'); // Hapus pengaduan jika pelanggan dihapus
+            $table->unsignedBigInteger('idpelanggan'); // Kolom foreign key
+            $table->foreign('idpelanggan')->references('id_pelanggan')->on('pelanggan')->onDelete('cascade');
             $table->string('pengaduan'); // pengaduan
             $table->timestamps(); // created_at dan updated_at
         });
