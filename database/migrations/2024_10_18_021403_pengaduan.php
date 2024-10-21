@@ -14,8 +14,8 @@ return new class extends Migration
         //
         Schema::create('pengaduan', function (Blueprint $table) {
             $table->id('id_pengaduan'); // Primary key untuk pengaduan
-            $table->unsignedBigInteger('idpelanggan'); // Kolom foreign key
             $table->foreign('idpelanggan')->references('id_pelanggan')->on('pelanggan')->onDelete('cascade');
+            $table->unsignedBigInteger('idpelanggan'); // Kolom foreign key
             $table->string('pengaduan'); // pengaduan
             $table->timestamps(); // created_at dan updated_at
         });
