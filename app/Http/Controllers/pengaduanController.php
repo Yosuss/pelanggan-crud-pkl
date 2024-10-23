@@ -11,11 +11,13 @@ class pengaduanController extends Controller
     //
     public function index()
     {
-        $pengaduan = pengaduanModel::all()->with('pelanggan')->get();
+        $pengaduan = pengaduanModel::with('pelanggan')->get();
         return view('pengaduan.pengaduan', compact('pengaduan'));
     }
 
-    public function tambah(){
-        
+    public function tambah($id)
+    {
+        $pengaduan = pengaduanModel::with('pelanggan')->findOrFail($id); 
+        return view('component.tambah_pengaduan', compact('pengaduan'));
     }
 }

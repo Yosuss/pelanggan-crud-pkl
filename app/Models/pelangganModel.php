@@ -19,7 +19,6 @@ class pelangganModel extends Model
         'kelompok_pelanggan',
     ];
 
-    // Relasi dengan model Pengaduan
     public function pengaduan()
     {
         return $this->hasMany(pengaduanModel::class, 'id_pelanggan');

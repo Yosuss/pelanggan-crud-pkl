@@ -15,10 +15,8 @@ class pengaduanModel extends Model
         'pengaduan',
     ];
 
-    // Relasi dengan model Pelanggan
     public function pelanggan()
     {
         return $this->belongsTo(pelangganModel::class, 'id_pelanggan');
     }
-
 }
