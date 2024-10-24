@@ -24,6 +24,7 @@
                                     <label for="cabang" class="block text-xl font-medium text-gray-700">cabang</label>
                                     <select name="cabang" id="cabang"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
+                                        <option value="">-- Pilih cabang --</option>
                                         <option value="teluk buyung">teluk buyung</option>
                                         <option value="jati sari">jati sari</option>
                                         <option value="rawa tembaga">rawa tembaga</option>
@@ -52,6 +53,7 @@
                                         class="block text-xl font-medium text-gray-700">kelompok pelanggan</label>
                                     <select name="kelompok_pelanggan" id="kelompok_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
+                                        <option value="">-- Pilih kelompok --</option>
                                         <option value="social">social</option>
                                         <option value="rumah tangga">rumah tangga</option>
                                         <option value="niaga">niaga</option>

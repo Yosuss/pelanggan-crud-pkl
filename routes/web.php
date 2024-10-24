@@ -21,3 +21,4 @@ Route::post('/pelanggan-update{id}',[pelangganController::class,'update'])->name
 
 Route::get('/pengaduan',[pengaduanController::class,'index'])->name('pengaduan');
 Route::post('/pengaduan-tambah',[pengaduanController::class,'tambah'])->name('pengaduan.tambah');
+Route::delete('/pengaduan-hapus{id}',[pengaduanController::class,'hapus'])->name('pengaduan.hapus');

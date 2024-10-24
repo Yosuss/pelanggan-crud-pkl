@@ -1,5 +1,5 @@
-<form action="{{ route('pelanggan.hapus', $item->id_pelanggan) }}" method="POST"
-    onsubmit="return confirm('Apakah Anda yakin ingin menghapus pesanan ini?');">
+<form action="{{ route('pengaduan.hapus', $item->id_pengaduan) }}" method="POST"
+    onsubmit="return confirm('Apakah Anda yakin ingin menghapus pengaduan ini?');">
     @csrf
     @method('DELETE')
     <button type="submit"

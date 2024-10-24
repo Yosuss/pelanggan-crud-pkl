@@ -63,14 +63,14 @@
                             <td class="border-2 py-1">{{ $item->kelompok_pelanggan }}</td>
                             <td class="flex">
                                 <div class="w-1/2">
-                                    @include('component.btn-edit')
+                                    @include('component.btn-edit-pelanggan')
                                 </div>
                                 <div class="w-1/2">
-                                    @include('component.btn-hapus')
+                                    @include('component.btn-hapus-pelanggan')
                                 </div>
                             </td>
                         </tbody>
-                    @endforeach
+                        @endforeach
                 </table>
             </div>
             <!-- Dashboard field end -->

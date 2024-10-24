@@ -50,18 +50,22 @@
                         <th class="font-bold border-2 py-1">alamat</th>
                         <th class="font-bold border-2 py-1">no_telepon</th>
                         <th class="font-bold border-2 py-1">pengaduan</th>
+                        <th class="font-bold border-2 py-1">aksi</th>
                     </thead>
 
                     @foreach ($pengaduan as $item)
                         <tbody id="data" class="data">
                             <td class="border-2 py-1">{{ $loop->iteration }}</td>
-                            <td class="border-2 py-1">{{ $item->id_pengaduan}}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->id_pelanggan}}</td>
+                            <td class="border-2 py-1">{{ $item->id_pengaduan }}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->id_pelanggan }}</td>
                             <td class="border-2 py-1">{{ $item->pelanggan->cabang }}</td>
                             <td class="border-2 py-1">{{ $item->pelanggan->nama }}</td>
                             <td class="border-2 py-1">{{ $item->pelanggan->alamat }}</td>
                             <td class="border-2 py-1">{{ $item->pelanggan->no_telepon }}</td>
                             <td class="border-2 py-1">{{ $item->pengaduan }}</td>
+                            <td>
+                                @include('component.btn-hapus-pengaduan')
+                            </td>
                         </tbody>
                     @endforeach
                 </table>
