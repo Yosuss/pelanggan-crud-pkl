@@ -21,6 +21,6 @@ class pelangganModel extends Model
 
     public function pengaduan()
     {
-        return $this->hasMany(pengaduanModel::class, 'id_pelanggan');
+        return $this->hasMany(pengaduanModel::class);
     }
 }

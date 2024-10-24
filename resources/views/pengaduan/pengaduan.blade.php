@@ -43,6 +43,7 @@
                 <table action="" class="pengaduan text-center border-2 w-full">
                     <thead id="nav-data" class="nav-data">
                         <th class="font-bold border-2 py-1">no</th>
+                        <th class="font-bold border-2 py-1">id_pengaduan</th>
                         <th class="font-bold border-2 py-1">id_pelanggan</th>
                         <th class="font-bold border-2 py-1">cabang</th>
                         <th class="font-bold border-2 py-1">nama</th>
@@ -53,13 +54,14 @@
 
                     @foreach ($pengaduan as $item)
                         <tbody id="data" class="data">
-                            <td class="border-2">{{ $loop->iteration }}</td>
-                            <td class="border-2">{{ $item->pelanggan->id_pelanggan }}</td>
-                            <td class="border-2">{{ $item->pelanggan->cabang }}</td>
-                            <td class="border-2">{{ $item->pelanggan->nama }}</td>
-                            <td class="border-2">{{ $item->pelanggan->alamat }}</td>
-                            <td class="border-2">{{ $item->pelanggan->no_telepon }}</td>
-                            <td class="border-2">{{ $item->pengaduan }}</td>
+                            <td class="border-2 py-1">{{ $loop->iteration }}</td>
+                            <td class="border-2 py-1">{{ $item->id_pengaduan}}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->id_pelanggan}}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->cabang }}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->nama }}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->alamat }}</td>
+                            <td class="border-2 py-1">{{ $item->pelanggan->no_telepon }}</td>
+                            <td class="border-2 py-1">{{ $item->pengaduan }}</td>
                         </tbody>
                     @endforeach
                 </table>

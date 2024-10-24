@@ -19,19 +19,24 @@
                             <h2 class="font-bold text-3xl mb-4">Tambah Data</h2>
                             <!-- Form dalam modal -->
                             <form action="{{ route('pengaduan.tambah') }}" method="POST" class="capitalize">
+                                @csrf
                                 <div class="mb-4">
                                     <label for="id_pelanggan"
                                         class="block text-xl font-medium text-gray-700">id_pelanggan</label>
-                                    {{-- <select name="id_pelanggan" id="id_pelanggan"
-                                        class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                        <option value="id_pelanggan">id_pelanggan</option>
-                                    </select> --}}
                                     <select name="id_pelanggan" id="id_pelanggan"
+                                        class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
+                                        <option value="">-- Pilih Pelanggan --</option>
+                                        @foreach ($pelanggan as $item)
+                                            <option value="{{ $item->id_pelanggan }}">{{ $item->id_pelanggan }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                    {{-- <select name="id_pelanggan" id="id_pelanggan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl"
                                         required value="{{ $pengaduan->pelanggan->id_pelanggan }}">
                                         <option value="id_pelanggan">
                                         id_pelanggan</option>
-                                    </select>
+                                    </select> --}}
                                 </div>
                                 <div class="mb-4">
                                     <label for="pengaduan"

@@ -54,13 +54,13 @@
 
                     @foreach ($pelanggan as $item)
                         <tbody id="data" class="data">
-                            <td class="border-2">{{ $loop->iteration }}</td>
-                            <td class="border-2">{{ $item->id_pelanggan }}</td>
-                            <td class="border-2">{{ $item->cabang }}</td>
-                            <td class="border-2">{{ $item->nama }}</td>
-                            <td class="border-2">{{ $item->alamat }}</td>
-                            <td class="border-2">{{ $item->no_telepon }}</td>
-                            <td class="border-2">{{ $item->kelompok_pelanggan }}</td>
+                            <td class="border-2 py-1">{{ $loop->iteration }}</td>
+                            <td class="border-2 py-1">{{ $item->id_pelanggan }}</td>
+                            <td class="border-2 py-1">{{ $item->cabang }}</td>
+                            <td class="border-2 py-1">{{ $item->nama }}</td>
+                            <td class="border-2 py-1">{{ $item->alamat }}</td>
+                            <td class="border-2 py-1">{{ $item->no_telepon }}</td>
+                            <td class="border-2 py-1">{{ $item->kelompok_pelanggan }}</td>
                             <td class="flex">
                                 <div class="w-1/2">
                                     @include('component.btn-edit')

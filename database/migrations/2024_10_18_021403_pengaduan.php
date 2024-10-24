@@ -13,15 +13,13 @@ return new class extends Migration
     {
         //
         Schema::create('pengaduan', function (Blueprint $table) {
-            $table->id('id_pengaduan'); // Primary key untuk pengaduan
-            $table->unsignedBigInteger('id_pelanggan'); // Kolom foreign key
-            $table->string('pengaduan'); // pengaduan
-            $table->timestamps(); // created_at dan updated_at
-            $table->foreign('id_pelanggan')
+            $table->id('id_pengaduan'); // Primary key
+            $table->string('pengaduan');
+            $table->foreignId('id_pelanggan') // Foreign key
                 ->references('id_pelanggan')
                 ->on('pelanggan')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+                ->onDelete('cascade');
+            $table->timestamps(); // Created at and Updated at
         });
     }
 
