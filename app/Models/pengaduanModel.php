@@ -12,10 +12,17 @@ class pengaduanModel extends Model
     protected $primaryKey = 'id_pengaduan'; // Primary key
     protected $fillable = [
         'pengaduan',
+        'pegawai',
+
     ];
 
     public function pelanggan()
     {
         return $this->belongsTo(pelangganModel::class, 'id_pelanggan'); // Foreign key yang menghubungkan ke tabel pelanggan
     }
+
+    // public function update_pengaduan()
+    // {
+    //     return $this->hasMany(update_pengaduan::class);
+    // }
 }

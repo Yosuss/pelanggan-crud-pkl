@@ -15,12 +15,10 @@ class loginController extends Controller
 
     public function login(Request $request)
     {
-        // $username = 'admin';
-        // $password = '200';
-        // if ($username && $password) {
-        //     return redirect()->route('pelanggan');
-        // } else {
-        //     return redirect()->route('login');
-        // }
+        // $data = $request->only('username','password');
+        // if (Auth::attempt($data)) {
+        //     $request->session()->regenerate();
+        //     return redirect()-?route();
+        // } 
     }
 }

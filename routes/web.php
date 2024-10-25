@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 Route::get('/login',[loginController::class,'index']);
 Route::post('/login',[loginController::class,'login'])->name('login');
+
 Route::get('/',[pelangganController::class,'index'])->name('pelanggan');
 // Route::get('/',[pelangganController::class,'index'])->middleware('isAdmin')->name('pelanggan');
 Route::post('/pelanggan-tambah',[pelangganController::class,'tambah'])->name('pelanggan.tambah');
@@ -22,3 +23,5 @@ Route::post('/pelanggan-update{id}',[pelangganController::class,'update'])->name
 Route::get('/pengaduan',[pengaduanController::class,'index'])->name('pengaduan');
 Route::post('/pengaduan-tambah',[pengaduanController::class,'tambah'])->name('pengaduan.tambah');
 Route::delete('/pengaduan-hapus{id}',[pengaduanController::class,'hapus'])->name('pengaduan.hapus');
+Route::get('/pengaduan-update{id}',[pengaduanController::class,'update'])->name('pengaduan.update');
+Route::post('/pengaduan-update-pengaduan{id}',[pengaduanController::class,'update_pengaduan'])->name('pengaduan.update-pengaduan');

@@ -50,7 +50,8 @@
                         <th class="font-bold border-2 py-1">alamat</th>
                         <th class="font-bold border-2 py-1">no_telepon</th>
                         <th class="font-bold border-2 py-1">pengaduan</th>
-                        <th class="font-bold border-2 py-1">aksi</th>
+                        <th class="font-bold border-2 py-1">pegawai</th>
+                        <th colspan="2" class="font-bold border-2 py-1">Aksi</th>
                     </thead>
 
                     @foreach ($pengaduan as $item)
@@ -63,8 +64,14 @@
                             <td class="border-2 py-1">{{ $item->pelanggan->alamat }}</td>
                             <td class="border-2 py-1">{{ $item->pelanggan->no_telepon }}</td>
                             <td class="border-2 py-1">{{ $item->pengaduan }}</td>
-                            <td>
-                                @include('component.btn-hapus-pengaduan')
+                            <td class="border-2 py-1">{{ $item->pegawai }}</td>
+                            <td class="flex">
+                                <div class="w-1/2">
+                                    @include('component.btn-update-pengaduan')
+                                </div>
+                                <div class="w-1/2">
+                                    @include('component.btn-hapus-pengaduan')
+                                </div>
                             </td>
                         </tbody>
                     @endforeach

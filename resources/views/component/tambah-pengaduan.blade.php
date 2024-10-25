@@ -43,6 +43,7 @@
                                         class="block text-xl font-medium text-gray-700">pengaduan</label>
                                     <select name="pengaduan" id="pengaduan"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
+                                        <option value="">-- Pilih pengaduan --</option>
                                         <option value="air kecil">air kecil</option>
                                         <option value="air kotor">air kotor</option>
                                         <option value="air tidak keruh">air tidak keruh</option>

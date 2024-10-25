@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\pelangganModel;
 use App\Models\pengaduanModel;
 use App\Models\penggaduanModel;
+use App\Models\update_pengaduan;
 use Illuminate\Http\Request;
 
 class pengaduanController extends Controller
@@ -45,4 +46,34 @@ class pengaduanController extends Controller
             return to_route('pengaduan')->withErrors('gagal hapus');
         }
     }
+
+    public function update($id)
+    {
+        $pengaduan = pengaduanModel::findOrFail($id);
+        $pengaduan_all = pengaduanModel::with('pelanggan')->get();
+        return view('pengaduan.update_pengaduan', compact('pengaduan','pengaduan_all'));
+    }
+    
+    public function update_pengaduan(Request $request, $id)
+    {
+        $request->validate([
+            'pengaduan' => 'required',
+            'pegawai' => 'required',
+        ],[
+            'pengaduan.required' => 'pengaduan harus diisi.',
+            'pegawai.required' => 'pegawai harus diisi.',
+        ]);
+
+        $pengaduan = pengaduanModel::findOrFail($id);
+        try {
+            $pengaduan->pengaduan = $request->pengaduan;
+            $pengaduan->pegawai = $request->pegawai;
+            $pengaduan->save();
+                return redirect()->route('pengaduan');
+        } catch (\Exception $e) {
+            return redirect()->route('pengaduan')->withErrors('Gagal mengupdate data.');
+        }
+        return redirect()->route('pengaduan')->with('success', 'inputan berhasil ditambahkan');
+    }
+
 }

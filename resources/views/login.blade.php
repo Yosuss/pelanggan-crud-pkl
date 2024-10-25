@@ -16,7 +16,7 @@
                 <div class="btn flex gap-2">
                     <button type="submit"
                         class="w-full bg-blue-600 text-white font-bold p-2 rounded-md hover:bg-blue-700">login</button>
-                </div>
+                </div> 
             </form>
         </div>
     </div>
