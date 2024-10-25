@@ -9,11 +9,16 @@
             </a>
             <div class="list gap-2 justify-center items-center m-6 border-b-2">
                 <a href="{{ url('/') }}">
-                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">pelanggan</div>
+                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">
+                        <i class="bi bi-people-fill"></i>
+                        pelanggan
+                    </div>
                 </a>
                 <a href="{{ url('/pengaduan') }}">
                     <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
-                    pengaduan</div>
+                        <i class="bi bi-chat-right-dots-fill"></i>
+                        pengaduan
+                    </div>
                 </a>
             </div>
             <a href="{{ url('/login') }}">
@@ -70,7 +75,7 @@
                                 </div>
                             </td>
                         </tbody>
-                        @endforeach
+                    @endforeach
                 </table>
             </div>
             <!-- Dashboard field end -->

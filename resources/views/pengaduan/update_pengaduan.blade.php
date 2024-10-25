@@ -7,52 +7,17 @@
                 @csrf
                 <div class="mb-4">
                     <label for="id_pengaduan" class="block text-xl font-medium text-gray-700">id pelanggan</label>
-                    <div name="id_pengaduan" id="id_pengaduan" class="text_xl">{{ $pengaduan->id_pengaduan }}</div>
+                    <div name="id_pengaduan" id="id_pengaduan" class=" text-xl">{{ $pengaduan->id_pengaduan }}</div>
                 </div>
-                {{-- <div class="mb-4">
-                    <label for="cabang" class="block text-xl font-medium text-gray-700">cabang</label>
-                    <div name="cabang" id="cabang" class="text-xl">
-                        {{ $pengaduan_all->pelanggan->cabang }}
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label for="nama" class="block text-xl font-medium text-gray-700">nama</label>
-                    <div name="nama" id="nama" class="text-xl">
-                        {{ $pengaduan_all->pelanggan->nama }}
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label for="alamat" class="block text-xl font-medium text-gray-700">alamat</label>
-                    <div name="alamat" id="alamat" class="text-xl">
-                        {{ $pengaduan_all->pelanggan->alamat }}
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label for="no_telepon" class="block text-xl font-medium text-gray-700">no_telepon</label>
-                    <div name="no_telepon" id="no_telepon" class="text-xl">
-                        {{ $pengaduan_all->pelanggan->no_telepon }}
-                    </div>
-                </div> --}}
                 <div class="mb-4">
                     <label for="pengaduan" class="block text-xl font-medium text-gray-700">pengaduan</label>
-                    <select name="pengaduan" id="pengaduan"
-                        class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                        <option value="air kecil"
-                            @if ($pengaduan->pengaduan == 'air kecil') {
-                            {{ 'selected' }}
-                        } @endif>
-                            air kecil</option>
-                        <option value="air kotor"
-                            @if ($pengaduan->pengaduan == 'air kotor') {
-                            {{ 'selected' }}
-                        } @endif>
-                            air kotor</option>
-                        <option value="air tidak keruh"
-                            @if ($pengaduan->pengaduan == 'air tidak keruh') {
-                            {{ 'selected' }}
-                        } @endif>
-                            air tidak keruh</option>
-                    </select>
+                    <div name="pengaduan" id="pengaduan" class=" text-xl">{{ $pengaduan->pengaduan }}</div>
+                </div>
+                <div class="mb-4">
+                    <label for="update_pengaduan" class="block text-xl font-medium text-gray-700">update pengaduan
+                    </label>
+                    <input type="text" name="update_pengaduan" id="update_pengaduan" value="{{$pengaduan->update_pengaduan}}"
+                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
                 </div>
                 <div class="mb-4">
                     <label for="pegawai" class="block text-xl font-medium text-gray-700">pegawai</label>

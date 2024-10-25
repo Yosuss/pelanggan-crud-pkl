@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('pengaduan', function (Blueprint $table) {
             $table->id('id_pengaduan'); // Primary key
             $table->string('pengaduan');
+            $table->string('update_pengaduan')->nullable();
             $table->string('pegawai')->nullable();
             $table->foreignId('id_pelanggan') // Foreign key
                 ->references('id_pelanggan')

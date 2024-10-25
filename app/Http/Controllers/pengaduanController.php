@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\pelangganModel;
 use App\Models\pengaduanModel;
-use App\Models\penggaduanModel;
-use App\Models\update_pengaduan;
 use Illuminate\Http\Request;
 
 class pengaduanController extends Controller
@@ -57,16 +55,16 @@ class pengaduanController extends Controller
     public function update_pengaduan(Request $request, $id)
     {
         $request->validate([
-            'pengaduan' => 'required',
+            'update_pengaduan' => 'required',
             'pegawai' => 'required',
         ],[
-            'pengaduan.required' => 'pengaduan harus diisi.',
+            'update_pengaduan.required' => 'update pengaduan harus diisi.',
             'pegawai.required' => 'pegawai harus diisi.',
         ]);
 
         $pengaduan = pengaduanModel::findOrFail($id);
         try {
-            $pengaduan->pengaduan = $request->pengaduan;
+            $pengaduan->update_pengaduan = $request->update_pengaduan;
             $pengaduan->pegawai = $request->pegawai;
             $pengaduan->save();
                 return redirect()->route('pengaduan');
