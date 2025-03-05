@@ -53,7 +53,6 @@ class pelangganController extends Controller
     public function edit(Request $request, $id)
     {
         $pelanggan = pelangganModel::findOrFail($id);
-        // return view('pelanggan.pelanggan-edit', compact('pelanggan'));
         return view('pelanggan.pelanggan-edit', compact('pelanggan'));
     }
 

@@ -2,7 +2,7 @@
 @section('konten')
     <div class="bg-gray-200 flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-lg shadow-md max-w-md ">
-            <h2 class="text-2xl font-bold mb-6 text-center capitalize">edit data</h2>
+            <h2 class="text-2xl font-bold mb-6 text-center capitalize">update data</h2>
             <form action="{{ route('pengaduan.update-pengaduan', $pengaduan->id_pengaduan) }}" method="POST">
                 @csrf
                 <div class="mb-4">
@@ -39,7 +39,7 @@
                 <div class="btn flex gap-2">
                     <a href="{{ route('pengaduan') }}"
                         class="w-full flex justify-center items-center shadow-md bg-gray-400 text-white p-2 rounded-md hover:bg-gray-700">
-                        <button type="submit">kembali</button>
+                        <button type="button">kembali</button>
                     </a>
                     <button type="submit"
                         class="w-full bg-blue-600 text-white p-2 rounded-md shadow-md hover:bg-blue-700">update</button>

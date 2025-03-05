@@ -20,6 +20,12 @@
                         pengaduan
                     </div>
                 </a>
+                <a href="{{ url('/pengaduan_it') }}">
+                    <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
+                        <i class="bi bi-people-fill"></i>
+                        pengaduan_it
+                    </div>
+                </a>
             </div>
             <a href="{{ url('/login') }}">
                 <div class="logout">

@@ -6,7 +6,7 @@
             <form action="{{ route('pelanggan.update', $pelanggan->id_pelanggan) }}" method="POST">
                 @csrf
                 <div class="mb-4">
-                    <label for="id_pelanggan" class="block text-sm font-medium text-gray-700">id pelanggan</label>
+                    <label for="id_pelanggan" class="block text-xl font-medium text-gray-700">id pelanggan</label>
                     <div name="id_pelanggan" id="id_pelanggan">{{ $pelanggan->id_pelanggan }}</div>
                     {{-- <input type="number" name="id_pelanggan" id="id_pelanggan" required
                         value="{{ $pelanggan->id_pelanggan }}"> --}}
@@ -92,7 +92,7 @@
                 <div class="btn flex gap-2">
                     <a href="{{ route('pelanggan') }}"
                         class="w-full flex justify-center items-center shadow-md bg-gray-400 text-white p-2 rounded-md hover:bg-gray-700">
-                        <button type="submit">kembali</button>
+                        <button type="button">kembali</button>
                     </a>
                     <button type="submit"
                         class="w-full bg-blue-600 text-white p-2 rounded-md shadow-md hover:bg-blue-700">update</button>

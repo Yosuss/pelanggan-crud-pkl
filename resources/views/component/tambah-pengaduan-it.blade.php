@@ -18,47 +18,40 @@
                         <div class="bg-white p-6 xl justify-center">
                             <h2 class="font-bold text-3xl mb-4">Tambah Data</h2>
                             <!-- Form dalam modal -->
-                            <form action="{{ route('pelanggan.tambah') }}" method="POST" class="capitalize">
+                            <form action="{{ route('pengaduan_it.tambah') }}" method="POST" class="capitalize">
                                 @csrf
-                                <div class="mb-4">
-                                    <label for="cabang" class="block text-xl font-medium text-gray-700">cabang</label>
-                                    <select name="cabang" id="cabang"
+                                {{-- <div class="mb-4">
+                                    <label for="nama" class="block text-xl font-medium text-gray-700">nama</label>
+                                    <select name="nama" id="nama"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                        <option value="">-- Pilih cabang --</option>
-                                        <option value="teluk buyung">teluk buyung</option>
-                                        <option value="jati sari">jati sari</option>
-                                        <option value="rawa tembaga">rawa tembaga</option>
-                                        <option value="wisma asri">wisma asri</option>
-                                        <option value="pondok hijau">pondok hijau</option>
+                                        <option value="">-- Pilih Nama Pelanggan --</option>
+                                        @foreach ($pelanggan as $item)
+                                            <option value="{{ $item->nama }}">{{ $item->nama }}
+                                            </option>
+                                        @endforeach
                                     </select>
-                                </div>
+                                </div> --}}
                                 <div class="mb-4">
                                     <label for="nama" class="block text-xl font-medium text-gray-700">nama</label>
                                     <input type="text" name="nama" id="nama"
                                         class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
                                 </div>
                                 <div class="mb-4">
-                                    <label for="alamat" class="block text-xl font-medium text-gray-700">alamat</label>
-                                    <input type="text" name="alamat" id="alamat"
-                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="no_telepon" class="block text-xl font-medium text-gray-700">no telepon
-                                    </label>
-                                    <input type="number" name="no_telepon" id="no_telepon"
-                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="kelompok_pelanggan"
-                                        class="block text-xl font-medium text-gray-700">kelompok pelanggan</label>
-                                    <select name="kelompok_pelanggan" id="kelompok_pelanggan"
+                                    <label for="bagian" class="block text-xl font-medium text-gray-700">bagian</label>
+                                    <select name="bagian" id="bagian"
                                         class="mt-1 capitalize block w-full py-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
-                                        <option value="">-- Pilih kelompok --</option>
-                                        <option value="social">social</option>
-                                        <option value="rumah tangga">rumah tangga</option>
-                                        <option value="niaga">niaga</option>
-                                        <option value="industri">industri</option>
+                                        <option value="">-- Pilih bagian --</option>
+                                        <option value="Spi">Spi</option>
+                                        <option value="Sdm">Sdm</option>
+                                        <option value="Distribusi">Distribusi</option>
+                                        <option value="produksi">produksi</option>
                                     </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="pengaduan"
+                                        class="block text-xl font-medium text-gray-700">pengaduan</label>
+                                    <input type="text" name="pengaduan" id="pengaduan"
+                                        class="mt-1 block w-full p-2 border-2 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-xl">
                                 </div>
                                 <div class="flex justify-end">
                                     <button type="button" id="closeModal-tambah"

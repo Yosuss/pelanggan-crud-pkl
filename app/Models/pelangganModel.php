@@ -23,4 +23,5 @@ class pelangganModel extends Model
     {
         return $this->hasMany(pengaduanModel::class);
     }
+    
 }

@@ -12,7 +12,6 @@ class pengaduanController extends Controller
     public function index()
     {
         // return view('pengaduan.pengaduan', compact('pengaduan'));
-
         $pengaduan = pengaduanModel::with('pelanggan')->get();
         $pelanggan = pelangganModel::all();
         return view('pengaduan.pengaduan', compact('pelanggan', 'pengaduan'));

@@ -15,13 +15,13 @@
                     </div>
                 </a>
                 <a href="{{ url('/pengaduan') }}">
-                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">
+                    <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
                         <i class="bi bi-chat-right-dots-fill"></i>
                         pengaduan
                     </div>
                 </a>
                 <a href="{{ url('/pengaduan_it') }}">
-                    <div class="text-left px-4 py-1 my-4 rounded-lg hover:bg-white hover:px-4 hover:py-1 hover:shadow">
+                    <div class="bg-white px-4 py-1 shadow text-left my-4 rounded-lg">
                         <i class="bi bi-people-fill"></i>
                         pengaduan_it
                     </div>
@@ -48,42 +48,37 @@
             <!-- Navbar end -->
 
             <!-- Dashboard field -->
-            @include('component.tambah-pengaduan')
+            @include('component.tambah-pengaduan-it')
 
             <div class="form p-4">
                 <table action="" class="pengaduan text-center border-2 w-full">
                     <thead id="nav-data" class="nav-data">
                         <th class="font-bold border-2 py-1">no</th>
-                        <th class="font-bold border-2 py-1">id_pengaduan</th>
-                        <th class="font-bold border-2 py-1">id_pelanggan</th>
-                        <th class="font-bold border-2 py-1">cabang</th>
+                        <th class="font-bold border-2 py-1">id_pengaduan_it</th>
                         <th class="font-bold border-2 py-1">nama</th>
-                        <th class="font-bold border-2 py-1">alamat</th>
-                        <th class="font-bold border-2 py-1">no_telepon</th>
+                        <th class="font-bold border-2 py-1">bagian</th>
                         <th class="font-bold border-2 py-1">pengaduan</th>
-                        <th class="font-bold border-2 py-1">update_pengaduan</th>
-                        <th class="font-bold border-2 py-1">pegawai</th>
+                        <th class="font-bold border-2 py-1">update pengaduan</th>
                         <th colspan="2" class="font-bold border-2 py-1">Aksi</th>
                     </thead>
 
-                    @foreach ($pengaduan as $item)
+                    @foreach ($pengaduan_it as $item)
                         <tbody id="data" class="data">
                             <td class="border-2 py-1">{{ $loop->iteration }}</td>
-                            <td class="border-2 py-1">{{ $item->id_pengaduan }}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->id_pelanggan }}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->cabang }}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->nama }}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->alamat }}</td>
-                            <td class="border-2 py-1">{{ $item->pelanggan->no_telepon }}</td>
+                            <td class="border-2 py-1">{{ $item->id_pengaduan_it }}</td>
+                            <td class="border-2 py-1">{{ $item->nama }}</td>
+                            <td class="border-2 py-1">{{ $item->bagian }}</td>
                             <td class="border-2 py-1">{{ $item->pengaduan }}</td>
-                            <td class="border-2 py-1">{{ $item->update_pengaduan }}</td>
-                            <td class="border-2 py-1">{{ $item->pegawai }}</td>
+                            <td class="border-2 py-1">{{ $item->update_pengaduan_it }}</td>
                             <td class="flex">
-                                <div class="w-1/2">
-                                    @include('component.btn-update-pengaduan')
+                                <div class="w-full">
+                                    @include('component.btn-edit-pengaudan-it')
                                 </div>
-                                <div class="w-1/2">
-                                    @include('component.btn-hapus-pengaduan')
+                                <div class="w-full">
+                                    @include('component.btn-update-pengaduan-it')
+                                </div>
+                                <div class="w-full">
+                                    @include('component.btn-hapus-pengaduan-it')
                                 </div>
                             </td>
                         </tbody>
